@@ -37,10 +37,25 @@
                         Jurusan
                     </label>
 
-                    <input type="text" name="major" id="major"
-                        value="{{ old('major') }}"
+                    <select name="major" id="major"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
-                        placeholder="Contoh: PPLG" required>
+                        required>
+
+                        <option value="">Pilih Jurusan</option>
+
+                        <option value="PPLG" {{ old('major') == 'PPLG' ? 'selected' : '' }}>
+                            PPLG
+                        </option>
+
+                        <option value="DKV" {{ old('major') == 'DKV' ? 'selected' : '' }}>
+                            DKV
+                        </option>
+
+                        <option value="TKJ" {{ old('major') == 'TKJ' ? 'selected' : '' }}>
+                            TKJ
+                        </option>
+
+                    </select>
                 </div>
 
                 <button type="submit"
